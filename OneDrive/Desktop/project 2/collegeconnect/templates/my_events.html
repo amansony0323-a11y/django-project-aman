@@ -1,0 +1,14 @@
+<h2>My Registered Events</h2>
+
+{% if registrations %}
+    {% for reg in registrations %}
+        <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+            <h3>{{ reg.event.title }}</h3>
+            <p>{{ reg.event.description }}</p>
+            <p><b>Date:</b> {{ reg.event.date }}</p>
+            <p><b>Location:</b> {{ reg.event.location }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>You have not registered for any events yet.</p>
+{% endif %}

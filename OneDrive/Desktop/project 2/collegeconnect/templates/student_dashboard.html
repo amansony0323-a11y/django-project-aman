@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+
+<h1>Student Dashboard</h1>
+
+<p>Welcome, {{ request.user.username }}</p>
+
+<hr>
+
+<h3>Quick Links</h3>
+
+<ul>
+    <li><a href="{% url 'events' %}">View Events</a></li>
+    <li><a href="{% url 'my_events' %}">My Registered Events</a></li>
+    <li><a href="{% url 'profile' %}">My Profile</a></li>
+</ul>
+
+</body>
+</html>

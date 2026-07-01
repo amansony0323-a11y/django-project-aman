@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<p>Welcome, {{ request.user.username }}</p>
+
+<hr>
+
+<h3>Quick Links</h3>
+
+<ul>
+    <li><a href="/admin/">Django Admin Panel</a></li>
+    <li><a href="{% url 'events' %}">View Events</a></li>
+    <li><a href="{% url 'profile' %}">My Profile</a></li>
+</ul>
+
+</body>
+</html>

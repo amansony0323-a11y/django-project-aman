@@ -1,0 +1,22 @@
+<h2>All Events</h2>
+
+{% if events %}
+    {% for event in events %}
+        <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+            
+            <h3>
+                <a href="{% url 'event_detail' event.id %}">
+                    {{ event.title }}
+                </a>
+            </h3>
+
+            <p>{{ event.description }}</p>
+
+            <p><b>Date:</b> {{ event.date }}</p>
+            <p><b>Location:</b> {{ event.location }}</p>
+
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No events available</p>
+{% endif %}
